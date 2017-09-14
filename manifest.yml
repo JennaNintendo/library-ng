@@ -1,4 +1,5 @@
 ---
 applications:
 - name: library-ng
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
   path: dist
