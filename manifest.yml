@@ -1,0 +1,4 @@
+---
+applications:
+- name: library-ng
+  path: dist
