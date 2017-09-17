@@ -27,7 +27,27 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['Chrome', 'HeadlessChrome'],
+    customLaunchers: {
+      HeadlessChrome: {
+        base: 'Chrome',
+        flags: [
+          '--headless',
+          '--disable-background-networking',
+          '--disable-default-apps',
+          '--disable-extensions',
+          '--disable-gpu',
+          '--disable-sync',
+          '--disable-translate',
+          '--metrics-recording-only',
+          '--no-first-run',
+          '--safebrowsing-disable-auto-update',
+          '--mute-audio',
+          '--no-sandbox',
+          '--remote-debugging-port=9222'
+        ]
+      }
+    },
     singleRun: false
   });
 };
